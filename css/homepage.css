@@ -40,6 +40,10 @@ a {
   z-index: 1;
   right: 30px;
 }
+.separator {
+  border-top: 7px solid;
+  border-radius: 7px;
+}
 .dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
@@ -93,7 +97,10 @@ a {
   color: white;
 }
 .footer-wrapper {
-  padding: 1rem;
+  padding: 48px 0;
+}
+.close {
+  margin-right: -10px;
 }
 /* Color */
 .new-color {
@@ -104,6 +111,7 @@ a {
 
 .swiper {
   width: 100%;
+  padding-bottom: 32px;
 }
 
 .swiper-slide {
@@ -127,4 +135,20 @@ a {
 .swiper-pagination-bullet-active {
   color: #fff;
   background: var(--main-color);
+}
+.swiper-button-next,
+.swiper-button-prev {
+  top: unset;
+  bottom: 0;
+
+  &::after {
+    color: #323b40;
+    font-size: 24px;
+  }
+}
+.swiper-button-next {
+  right: 20px;
+}
+.swiper-button-prev {
+  left: 20px;
 }

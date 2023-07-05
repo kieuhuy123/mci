@@ -21,6 +21,15 @@
     />
     <link rel="stylesheet" href="./css/homepage.css" />
   </head>
+  <div id="fb-root"></div>
+  <script
+    async
+    defer
+    crossorigin="anonymous"
+    src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v17.0"
+    nonce="LWt5m5kD"
+  ></script>
+
   <body>
     <header>
       <nav class="nav d-flex flex-column">
@@ -176,6 +185,291 @@
               >
                 <i class="fa-solid fa-bars fa-2xl icon-menu"></i>
               </span>
+              <div
+                class="modal fade"
+                id="serviceModal"
+                tabindex="-1"
+                aria-labelledby="serviceModalLabel"
+                aria-modal="true"
+                role="dialog"
+              >
+                <div
+                  class="modal-dialog modal-fullscreen h-auto m-0"
+                  role="document"
+                >
+                  <div class="modal-content">
+                    <div class="modal-header border-0">
+                      <h5 class="modal-title text-white" id="serviceModalLabel">
+                        Services
+                      </h5>
+                      <button
+                        type="button"
+                        class="close btn bg-transparent"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">×</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="accordion" id="accordionService">
+                        <!-- Khoa hoc -->
+                        <div class="card border-0 mt-0">
+                          <div
+                            class="card-header mb-3"
+                            id="headingCourseModal"
+                            style="background-color: white; padding: unset"
+                          >
+                            <h6
+                              style="
+                                font-weight: bold;
+                                color: var(--main-color);
+                              "
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseCourseModal"
+                              aria-expanded="true"
+                              aria-controls="collapseCourseModal"
+                            >
+                              KHÓA HỌC
+                              <i
+                                class="fa-solid fa-caret-down"
+                                style="float: right"
+                              ></i>
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Lich dao tao -->
+                      <div class="card border-0 mt-0">
+                        <div
+                          class="card-header mb-3"
+                          id="headingSchedule"
+                          style="background-color: white; padding: unset"
+                        >
+                          <h6
+                            style="font-weight: bold; color: var(--main-color)"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseSchedule"
+                            aria-expanded="true"
+                            aria-controls="collapseSchedule"
+                          >
+                            LỊCH ĐÀO TẠO
+                            <i
+                              class="fa-solid fa-caret-down"
+                              style="float: right"
+                            ></i>
+                          </h6>
+                        </div>
+                        <div
+                          id="collapseSchedule"
+                          class="collapse"
+                          aria-labelledby="headingSchedule"
+                          data-parent="#accordionService"
+                        >
+                          <div class="card-body" style="padding: unset">
+                            <li>
+                              <a href="/homepage.html">
+                                <i
+                                  class="fa fa-calendar-o"
+                                  aria-hidden="true"
+                                ></i>
+                                Lịch đào tạo
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/homepage.html">
+                                <i
+                                  class="fa fa-lightbulb-o"
+                                  aria-hidden="true"
+                                ></i>
+                                Giảng viên
+                              </a>
+                            </li>
+                            <li class="mb-3">
+                              <a href="/homepage.html">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                Học viên
+                              </a>
+                            </li>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Bussiness -->
+                      <div class="card border-0">
+                        <div
+                          class="card-header mb-3"
+                          id="headingBusiness"
+                          style="background-color: white; padding: unset"
+                        >
+                          <h6
+                            style="font-weight: bold; color: var(--main-color)"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseBusiness"
+                            aria-expanded="true"
+                            aria-controls="collapseBusiness"
+                          >
+                            DOANH NGHIỆP
+                            <i
+                              class="fa-solid fa-caret-down"
+                              style="float: right"
+                            ></i>
+                          </h6>
+                        </div>
+                        <div
+                          id="collapseBusiness"
+                          class="collapse"
+                          aria-labelledby="headingBusiness"
+                          data-parent="#accordionService"
+                        >
+                          <div class="card-body" style="padding: unset">
+                            <li>
+                              <a href="/homepage.html">
+                                <i
+                                  class="fa fa-calendar-o"
+                                  aria-hidden="true"
+                                ></i>
+                                Lịch đào tạo
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/homepage.html">
+                                <i
+                                  class="fa fa-lightbulb-o"
+                                  aria-hidden="true"
+                                ></i>
+                                Giảng viên
+                              </a>
+                            </li>
+                            <li class="mb-3">
+                              <a href="/homepage.html">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                Học viên
+                              </a>
+                            </li>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Blog -->
+                      <div class="card border-0">
+                        <div
+                          class="card-header mb-3"
+                          style="background-color: white; padding: unset"
+                        >
+                          <a href="/blog/">
+                            <h6
+                              style="
+                                font-weight: bold;
+                                color: var(--main-color);
+                              "
+                            >
+                              BLOG
+                            </h6>
+                          </a>
+                        </div>
+                      </div>
+
+                      <!-- About us -->
+                      <div class="card" style="border: none; margin-top: 0px">
+                        <div
+                          class="card-header"
+                          id="headingOneService"
+                          style="background-color: white; padding: unset"
+                        >
+                          <h6
+                            style="font-weight: bold; color: var(--main-color)"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseOneService"
+                            aria-expanded="true"
+                            aria-controls="collapseOneService"
+                          >
+                            VỀ CHÚNG TÔI
+                            <i
+                              class="fa-solid fa-caret-down"
+                              style="float: right"
+                            ></i>
+                          </h6>
+                        </div>
+                        <div
+                          id="collapseOneService"
+                          class="collapse"
+                          aria-labelledby="headingOneService"
+                          data-parent="#accordionService"
+                        >
+                          <div class="card-body" style="padding: unset">
+                            <li>
+                              <a href="/homepage.html">
+                                <i
+                                  class="fa fa-calendar-o"
+                                  aria-hidden="true"
+                                ></i>
+                                Lịch đào tạo
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/homepage.html">
+                                <i
+                                  class="fa fa-lightbulb-o"
+                                  aria-hidden="true"
+                                ></i>
+                                Giảng viên
+                              </a>
+                            </li>
+                            <li class="mb-3">
+                              <a href="/homepage.html">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                Học viên
+                              </a>
+                            </li>
+                          </div>
+                          <div class="card-body" style="padding: unset">
+                            <li>
+                              <a href="/about/">
+                                <i
+                                  class="fa fa-caret-square-o-up"
+                                  aria-hidden="true"
+                                ></i>
+                                Học viện Công nghệ MCI
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="/careers/">
+                                <i
+                                  class="fa fa-street-view"
+                                  aria-hidden="true"
+                                ></i>
+                                Cơ hội nghề nghiệp
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="/event-list/">
+                                <i
+                                  class="fa fa-bullhorn"
+                                  aria-hidden="true"
+                                ></i>
+                                Sự kiện
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/about/#contact-us">
+                                <i
+                                  class="fa fa-telegram"
+                                  aria-hidden="true"
+                                ></i>
+                                Liên hệ
+                              </a>
+                            </li>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="nav-right d-flex align-items-center">
@@ -210,13 +504,10 @@
 
       <section class="container my-5 home-event">
         <div class="row justify-content-center">
-          <div class="col-12 col-md-5 mt-5 mt-md-0">
+          <div class="col-12 col-lg-5 mt-5 mt-lg-0">
             <div class="d-inline-block">
               <h3 class="fw-bolder new-color">Sự kiện của MCI</h3>
-              <hr
-                class="w-100 new-color opacity-100"
-                style="border-top: 3px solid"
-              />
+              <hr class="w-100 new-color opacity-100 separator" />
             </div>
             <!-- Swiper -->
             <div class="swiper mySwiper">
@@ -339,15 +630,15 @@
                 </div>
               </div>
               <div class="swiper-pagination"></div>
+              <!-- <button class="btn btn-next">Hello</button> -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
             </div>
           </div>
-          <div class="col-12 col-md-7">
+          <div class="col-12 col-lg-7 mt-5 mt-lg-0">
             <div class="d-inline-block">
               <h3 class="fw-bolder new-color">Bài viết mới nhất</h3>
-              <hr
-                class="w-100 new-color opacity-100"
-                style="border-top: 3px solid"
-              />
+              <hr class="w-100 new-color opacity-100 separator" />
             </div>
             <form class="row my-md-3 justify-content-center px-4">
               <div class="">
@@ -583,10 +874,7 @@
         <div class="text-center">
           <div class="d-inline-block">
             <h3 class="fw-bolder new-color">Thư viện ảnh</h3>
-            <hr
-              class="w-100 new-color opacity-100"
-              style="border-top: 3px solid"
-            />
+            <hr class="w-100 new-color opacity-100 separator" />
           </div>
         </div>
         <div class="row justify-content-center">
@@ -627,10 +915,7 @@
         <div class="text-center mb-3 mb-lg-5">
           <div class="d-inline-block">
             <h3 class="fw-bolder new-color">Chương trình đào tạo của MCI</h3>
-            <hr
-              class="w-100 new-color opacity-100"
-              style="border-top: 3px solid"
-            />
+            <hr class="w-100 new-color opacity-100 separator" />
           </div>
         </div>
         <div class="row justify-content-center">
@@ -747,21 +1032,24 @@
         </div>
       </div>
     </main>
+
     <footer class="footer">
       <div class="container footer-wrapper">
         <div class="row">
-          <div class="order-1 order-lg-0 col-6 col-lg-3 col-md-12">
-            <img
-              src="image/data analytics.png"
-              alt=""
-              class="w-100 object-fit-cover"
-            />
+          <div class="order-1 order-lg-0 col-6 col-lg-3">
+            <div
+              class="fb-page"
+              data-href="https://www.facebook.com/MCIVietnamOfficial/?ref=embed_page"
+              data-width="380"
+              data-hide-cover="false"
+              data-show-facepile="false"
+            ></div>
           </div>
 
-          <div class="col-6 col-lg-3 col-md-12">
+          <div class="col-6 col-lg-3">
             <div class="d-inline-block">
               <h4 class="footer-title text-uppercase">Hà Nội</h4>
-              <hr class="w-100 opacity-100" style="border-top: 3px solid" />
+              <hr class="w-100 opacity-100 separator" />
             </div>
 
             <ul class="list-unstyled">
@@ -791,10 +1079,10 @@
             </ul>
           </div>
 
-          <div class="col-6 col-lg-3 col-md-12">
+          <div class="col-6 col-lg-3">
             <div class="d-inline-block">
               <h4 class="footer-title text-uppercase">Hồ Chí Minh</h4>
-              <hr class="w-100 opacity-100" style="border-top: 3px solid" />
+              <hr class="w-100 opacity-100 separator" />
             </div>
 
             <ul class="list-unstyled">
@@ -842,10 +1130,10 @@
             </ul>
           </div>
 
-          <div class="col-6 col-lg-3 col-md-12">
+          <div class="col-6 col-lg-3">
             <div class="d-inline-block">
               <h4 class="footer-title text-uppercase">Hotline</h4>
-              <hr class="w-100 opacity-100" style="border-top: 3px solid" />
+              <hr class="w-100 opacity-100 separator" />
             </div>
 
             <ul class="list-unstyled">
@@ -867,6 +1155,7 @@
         </div>
       </div>
     </footer>
+    <script src="/js/homepage.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -888,6 +1177,10 @@
         pagination: {
           el: '.swiper-pagination',
           clickable: true
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
         }
       })
     </script>
